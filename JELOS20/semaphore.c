@@ -4,6 +4,7 @@
 // 4/6/2020
 
 #include "semaphore.h"
+#include "jelos.h"
 #include "tm4c123gh6pm.h"
 
 
@@ -29,6 +30,7 @@ void OS_Sem_Post(SEM_t *s)
 	unsigned int prev_state; 
 	prev_state = StartCritical();
 	*s = *s + 1; 
+	UnblockTask(s);
 	EndCritical(prev_state);
 }
 
@@ -36,6 +38,7 @@ void OS_Sem_Pend(SEM_t *s)
 {
 	DisableInterrupts();
 	while(*s==0){
+		BlockCurrentTask(s);
 		EnableInterrupts(); // allow things to happen so s could change
 		OS_Surrender();
 		DisableInterrupts();

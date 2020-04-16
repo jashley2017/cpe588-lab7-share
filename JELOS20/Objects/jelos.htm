@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\jelos.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\jelos.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Apr 16 17:16:21 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Apr 16 17:39:20 2020
 <BR><P>
 <H3>Maximum Stack Usage =        128 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -14,12 +14,12 @@ Functions with no stack information
 </H3><UL>
  <LI><a href="#[84]">Reset_Handler</a>
  <LI><a href="#[9]">SysTick_Handler</a>
- <LI><a href="#[99]">StartNewTask</a>
+ <LI><a href="#[9b]">StartNewTask</a>
  <LI><a href="#[93]">DisableInterrupts</a>
- <LI><a href="#[94]">EnableInterrupts</a>
+ <LI><a href="#[95]">EnableInterrupts</a>
  <LI><a href="#[90]">StartCritical</a>
  <LI><a href="#[91]">EndCritical</a>
- <LI><a href="#[ba]">WaitForInterrupt</a>
+ <LI><a href="#[bc]">WaitForInterrupt</a>
  <LI><a href="#[7d]">task_exit</a>
 </UL>
 </UL>
@@ -589,7 +589,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
 </UL>
 
-<P><STRONG><a name="[b4]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[b6]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[86]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -599,15 +599,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[b5]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[b7]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[b6]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[b8]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[b7]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[b9]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[b8]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[ba]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[b9]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[bb]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, jelosasm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
@@ -617,7 +617,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[99]"></a>StartNewTask</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, jelosasm.o(.text))
+<P><STRONG><a name="[9b]"></a>StartNewTask</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, jelosasm.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
 </UL>
 
@@ -625,50 +625,50 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 
-<P><STRONG><a name="[94]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
+<P><STRONG><a name="[95]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 
 <P><STRONG><a name="[90]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Init
 </UL>
 
 <P><STRONG><a name="[91]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Init
 </UL>
 
-<P><STRONG><a name="[ba]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[bc]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
 <P><STRONG><a name="[8a]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[bb]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[bd]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[bc]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[be]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[ae]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[b0]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[bd]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[bf]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[8b]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[be]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[c0]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[9d]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[9f]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[87]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
@@ -677,7 +677,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[bf]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[c1]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[94]"></a>BlockCurrentTask</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, jelos.o(i.BlockCurrentTask))
+<BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
+</UL>
 
 <P><STRONG><a name="[8d]"></a>CreateTask</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, jelos.o(i.CreateTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = CreateTask &rArr; InitSystem &rArr;  CreateTask (Cycle)
@@ -688,11 +692,11 @@ Global Symbols
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ac]"></a>My_TID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, jelos.o(i.My_TID))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
+<P><STRONG><a name="[ae]"></a>My_TID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, jelos.o(i.My_TID))
+<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
 </UL>
 
-<P><STRONG><a name="[98]"></a>OS_Delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, jelos.o(i.OS_Delay))
+<P><STRONG><a name="[9a]"></a>OS_Delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, jelos.o(i.OS_Delay))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zero
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Two
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;One
@@ -708,24 +712,26 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[92]"></a>OS_Sem_Pend</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, semaphore.o(i.OS_Sem_Pend))
+<P><STRONG><a name="[92]"></a>OS_Sem_Pend</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, semaphore.o(i.OS_Sem_Pend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = OS_Sem_Pend
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisableInterrupts
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Surrender
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BlockCurrentTask
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Surrender
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zero
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Two
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;One
 </UL>
 
-<P><STRONG><a name="[96]"></a>OS_Sem_Post</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, semaphore.o(i.OS_Sem_Post))
+<P><STRONG><a name="[97]"></a>OS_Sem_Post</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, semaphore.o(i.OS_Sem_Post))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = OS_Sem_Post
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartCritical
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnblockTask
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartCritical
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EndCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zero
@@ -733,7 +739,7 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;One
 </UL>
 
-<P><STRONG><a name="[95]"></a>OS_Surrender</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, semaphore.o(i.OS_Surrender))
+<P><STRONG><a name="[96]"></a>OS_Surrender</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, semaphore.o(i.OS_Surrender))
 <BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 
@@ -741,37 +747,37 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = One &rArr; slowprint &rArr; putc &rArr; fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ostestmain.o(i.main)
 </UL>
-<P><STRONG><a name="[a7]"></a>PLL_Init</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, pll.o(i.PLL_Init))
+<P><STRONG><a name="[a9]"></a>PLL_Init</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, pll.o(i.PLL_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[88]"></a>Schedule</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, jelos.o(i.Schedule))
+<P><STRONG><a name="[88]"></a>Schedule</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, jelos.o(i.Schedule))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = Schedule
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartNewTask
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartNewTask
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[9a]"></a>StartScheduler</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jelos.o(i.StartScheduler))
+<P><STRONG><a name="[9c]"></a>StartScheduler</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jelos.o(i.StartScheduler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = StartScheduler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NullTask
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableInterrupts
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a9]"></a>SysTick_Init</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, ostestmain.o(i.SysTick_Init))
+<P><STRONG><a name="[ab]"></a>SysTick_Init</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, ostestmain.o(i.SysTick_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -781,101 +787,105 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = Two &rArr; slowprint &rArr; putc &rArr; fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ostestmain.o(i.main)
 </UL>
-<P><STRONG><a name="[a3]"></a>UART_InChar</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, uart.o(i.UART_InChar))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+<P><STRONG><a name="[a5]"></a>UART_InChar</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, uart.o(i.UART_InChar))
+<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
 
-<P><STRONG><a name="[a8]"></a>UART_Init</STRONG> (Thumb, 132 bytes, Stack size 0 bytes, uart.o(i.UART_Init))
+<P><STRONG><a name="[aa]"></a>UART_Init</STRONG> (Thumb, 132 bytes, Stack size 0 bytes, uart.o(i.UART_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a4]"></a>UART_OutChar</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, uart.o(i.UART_OutChar))
+<P><STRONG><a name="[a6]"></a>UART_OutChar</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, uart.o(i.UART_OutChar))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+</UL>
+
+<P><STRONG><a name="[98]"></a>UnblockTask</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, jelos.o(i.UnblockTask))
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 </UL>
 
 <P><STRONG><a name="[81]"></a>Zero</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ostestmain.o(i.Zero))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = Zero &rArr; slowprint &rArr; putc &rArr; fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Delay
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Post
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Pend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ostestmain.o(i.main)
 </UL>
-<P><STRONG><a name="[9b]"></a>__0printf$3</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[9d]"></a>__0printf$3</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[c0]"></a>__1printf$3</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3), UNUSED)
+<P><STRONG><a name="[c2]"></a>__1printf$3</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3), UNUSED)
 
-<P><STRONG><a name="[9f]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3))
+<P><STRONG><a name="[a1]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf3.o(i.__0printf$3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;temp
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;settime
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;temp
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;settime
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[c1]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[c3]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[c2]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[c4]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[c3]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[c5]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[9e]"></a>execute</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, shell.o(i.execute))
+<P><STRONG><a name="[a0]"></a>execute</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, shell.o(i.execute))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = execute &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prmsg
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prmsg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[a2]"></a>fgetc</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, serialio.o(i.fgetc))
+<P><STRONG><a name="[a4]"></a>fgetc</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, serialio.o(i.fgetc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fgetc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_OutChar
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_InChar
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_OutChar
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_InChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getc
+<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getc
 </UL>
 
 <P><STRONG><a name="[7f]"></a>fputc</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, serialio.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_OutChar
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_OutChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf3.o(i.__0printf$3)
 </UL>
-<P><STRONG><a name="[a5]"></a>getc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, getc.o(i.getc))
+<P><STRONG><a name="[a7]"></a>getc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, getc.o(i.getc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = getc &rArr; fgetc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gets
+<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gets
 </UL>
 
-<P><STRONG><a name="[a6]"></a>gets</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, serialio.o(i.gets))
+<P><STRONG><a name="[a8]"></a>gets</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, serialio.o(i.gets))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gets &rArr; getc &rArr; fgetc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getc
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
@@ -884,49 +894,49 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = main &rArr; CreateTask &rArr; InitSystem &rArr;  CreateTask (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CreateTask
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sem_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[af]"></a>parse</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, shell.o(i.parse))
+<P><STRONG><a name="[b1]"></a>parse</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, shell.o(i.parse))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[ab]"></a>print_tid</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, shell.o(i.print_tid))
+<P><STRONG><a name="[ad]"></a>print_tid</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, shell.o(i.print_tid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = print_tid &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;My_TID
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;My_TID
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[a0]"></a>prmsg</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, serialio.o(i.prmsg))
+<P><STRONG><a name="[a2]"></a>prmsg</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, serialio.o(i.prmsg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = prmsg &rArr; putc &rArr; fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
+<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
 </UL>
 
-<P><STRONG><a name="[a1]"></a>putc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, putc.o(i.putc))
+<P><STRONG><a name="[a3]"></a>putc</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, putc.o(i.putc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = putc &rArr; fputc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prmsg
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prmsg
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
 </UL>
 
-<P><STRONG><a name="[aa]"></a>puts</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, puts.o(i.puts))
+<P><STRONG><a name="[ac]"></a>puts</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, puts.o(i.puts))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = puts &rArr; fputc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
@@ -935,10 +945,10 @@ Global Symbols
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>settime</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, shell.o(i.settime))
+<P><STRONG><a name="[af]"></a>settime</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, shell.o(i.settime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = settime &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
@@ -946,54 +956,54 @@ Global Symbols
 <P><STRONG><a name="[80]"></a>shell</STRONG> (Thumb, 184 bytes, Stack size 88 bytes, shell.o(i.shell))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = shell &rArr; settime &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gets
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;temp
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;settime
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gets
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;temp
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;settime
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_tid
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;execute
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ostestmain.o(i.main)
 </UL>
-<P><STRONG><a name="[97]"></a>slowprint</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ostestmain.o(i.slowprint))
+<P><STRONG><a name="[99]"></a>slowprint</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ostestmain.o(i.slowprint))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = slowprint &rArr; putc &rArr; fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_delay
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spin_delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Zero
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Two
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;One
 </UL>
 
-<P><STRONG><a name="[b3]"></a>spin_delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ostestmain.o(i.spin_delay))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
+<P><STRONG><a name="[b5]"></a>spin_delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ostestmain.o(i.spin_delay))
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slowprint
 </UL>
 
-<P><STRONG><a name="[b0]"></a>strcmp</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, serialio.o(i.strcmp))
+<P><STRONG><a name="[b2]"></a>strcmp</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, serialio.o(i.strcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[b2]"></a>temp</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, shell.o(i.temp))
+<P><STRONG><a name="[b4]"></a>temp</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, shell.o(i.temp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = temp &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
 
-<P><STRONG><a name="[b1]"></a>time</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, shell.o(i.time))
+<P><STRONG><a name="[b3]"></a>time</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, shell.o(i.time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = time &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shell
 </UL>
@@ -1011,7 +1021,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[7e]"></a>NullTask</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jelos.o(i.NullTask))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
+<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartScheduler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jelos.o(i.InitSystem)
 </UL>
@@ -1022,10 +1032,10 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jelosasm.o(.text)
 </UL>
-<P><STRONG><a name="[9c]"></a>_printf_core</STRONG> (Thumb, 436 bytes, Stack size 96 bytes, printf3.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<P><STRONG><a name="[9e]"></a>_printf_core</STRONG> (Thumb, 436 bytes, Stack size 96 bytes, printf3.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$3
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$3
 </UL>
 <P>
 <H3>

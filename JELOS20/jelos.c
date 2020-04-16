@@ -17,6 +17,19 @@ static void InitSystem(void);
 static void NullTask(void);
 //void EdgeCounter_Init(void);
 
+void BlockCurrentTask(volatile int * s){ 
+	CURRENT_TASK->blocked = s;
+}
+void UnblockTask(volatile int * s) {
+	TaskControlBlock *task_ptr; 
+	task_ptr = CURRENT_TASK->next;
+	
+	while(task_ptr->blocked != s){
+		task_ptr = task_ptr->next;
+	}
+	task_ptr->blocked = 0;
+}
+
 void OS_Delay(unsigned int d){
 	unsigned int i=0;
 	
@@ -115,7 +128,9 @@ unsigned char * Schedule(unsigned char * the_sp)
 	 CURRENT_TASK->sp = the_sp;
 	 CURRENT_TASK->state = T_READY;
 	 CURRENT_TASK = CURRENT_TASK->next;
-
+		while(CURRENT_TASK->blocked) {  // if the task is blocked by a semaphore, skip
+				CURRENT_TASK = CURRENT_TASK->next;
+		}
 	 if (CURRENT_TASK->state == T_READY){
 		  CURRENT_TASK->state = T_RUNNING;
 	    sp = CURRENT_TASK->sp;    

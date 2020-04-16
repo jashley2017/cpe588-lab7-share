@@ -13,13 +13,16 @@
 
 #define NULL 0
 
+#include <stdint.h>
+
 int CreateTask(void (*func)(void), 
                     unsigned char *stack_start, 
                     unsigned stack_size);
 
 int StartScheduler(void);
-unsigned char * StartNewTask(unsigned char * x,uint32_t y);
-										
+unsigned char * StartNewTask(unsigned char * x, uint32_t y);
+void BlockCurrentTask(volatile int * s);	
+void UnblockTask(volatile int * s);										
 void OS_Delay(unsigned int);
 
 /* Minimum stack size for a task function that does not use "any" stack space.
@@ -50,7 +53,8 @@ typedef struct TaskControlBlock
 	unsigned char	*stack_start;		/* stack low value */
 	unsigned char	*stack_end;			/* stack high value */
 	unsigned char	*sp;		/* current value of the stack pointer */
+		volatile int * blocked; /* address to a blocking semaphore if blocking */
 	} TaskControlBlock;
-
+	 
 
 #endif
