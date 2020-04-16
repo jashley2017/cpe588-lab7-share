@@ -11,6 +11,11 @@
 
 
 #ifdef NO_SEM
+
+void OS_Surrender(void) { 
+	NVIC_INT_CTRL_R = 0x04000000; // trigger the systick with a "software" interrupt
+	// does not restart the timer, just triggers a context switch
+}
 void OS_Sem_Init(SEM_t *s, int count)
 {
 	unsigned int prev_state; 
@@ -32,8 +37,10 @@ void OS_Sem_Pend(SEM_t *s)
 	DisableInterrupts();
 	while(*s==0){
 		EnableInterrupts(); // allow things to happen so s could change
+		OS_Surrender();
 		DisableInterrupts();
 	}
+	DisableInterrupts(); // this is in case the OS_Surrender context switch causes interrupts to be reenabled.
 	*s = *s - 1; 
 	EnableInterrupts();
 }
